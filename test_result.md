@@ -137,15 +137,18 @@ backend:
 
   - task: "RSVP System with Guest Count"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented detailed RSVP system with Going/Maybe/Not Going status and guest count tracking"
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED: RSVP creation and updates working correctly with all statuses (going/maybe/not_going). Guest count tracking accurate. RSVP counts (total_going, total_maybe, total_guests) calculated correctly in event responses. User-specific RSVP status properly returned."
 
   - task: "Comment System"
     implemented: true
