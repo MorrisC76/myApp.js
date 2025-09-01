@@ -152,15 +152,18 @@ backend:
 
   - task: "Comment System"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented event commenting system with user attribution"
+      - working: true
+        agent: "testing"
+        comment: "✅ PASSED: Comment creation and retrieval working perfectly. User attribution (username, full_name) correctly included in comment responses. Multiple users can comment on events successfully."
 
   - task: "Image Upload System"
     implemented: true
